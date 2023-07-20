@@ -1,0 +1,241 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+body{
+	background-image: url('images/jaclupanBH.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	height: 100%;
+}
+.container{
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 0px;
+}
+.header{
+	width: 100%;
+	height: 100px;
+	background-color: red;
+	position: relative;
+	padding: 20px;
+}
+.inner_header{
+	width: 1000px;
+	height: 100%;
+	margin: 0 auto;
+	background-color: blue;
+	border-radius: 20px;
+	position: relative;
+}
+.inner_header h1{
+	color: white;
+	height: 100%;
+	text-align: center;
+	font-family: 'montserrat';
+	font-size: 40px;
+	font-weight: 200;
+}
+.inner_header span{
+	font-weight: 800;
+}
+.profile-box{
+	background: #ff574a;
+	text-align: center;
+	padding: 40px 90px;
+	color: #fff;
+	position: relative;
+	border-radius: 20px; 
+	margin-top: 20px;
+}
+.profile-pic{
+	width: 150px;
+	border-radius: 50%;
+	background: #fff;
+	padding: 6px;
+	margin-top: 40px;
+}
+.profile-buttom{
+	background: #fff;
+	color: #999;
+	padding: 60px 0;
+	margin-right: -90px;
+	margin-left: -90px;
+	margin-bottom: -40px;
+	border-radius: 20px;
+	margin-top: -10px;
+}
+.profile-buttom img{
+	width: 30px;
+	margin-top: 15px;
+	cursor: pointer;
+}
+.profile-box button{
+	background: #fff;
+	color: black;
+	border: none;
+	outline: none;
+	box-shadow: 0 5px 10px rgba(244, 67, 54, 0.5);
+	padding: 15px 60px;
+	cursor: pointer;
+	border-radius: 30px;
+	margin-bottom: -50px;
+	font-weight: 600;
+	font-size: 16px;
+}
+.profile-box h3{
+	font-size: 22px;
+	margin-top: 20px;
+	font-weight: 500;
+}
+
+.social-media img{
+	width: 20px;
+	margin: 30px 5px;
+	cursor: pointer;
+}
+.timeline{
+	position: relative;
+	width: 1200px;
+	margin: 100px auto;
+	
+}
+.container_a1{
+	padding: 10px 50px;
+	position: relative;
+	width: 50%;
+	animation: movedown 1s linear forwards;
+	opacity: 0;
+}
+@keyframes movedown{
+	0%{
+		opacity: 1;
+		transform: translateY(-30px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+.container_a1:nth-child(1){
+	animation-delay: 0s;
+}
+.container_a1:nth-child(2){
+	animation-delay: 2s;
+}
+.container_a1:nth-child(3){
+	animation-delay: 4s;
+}
+.text-box{
+	padding: 20px 30px;
+	background: #fff;
+	position: relative;
+	border-radius: 6px;
+	font-size: 15px;
+}
+.left-container{
+	left: 0;
+}
+.right-container{
+	left: 50%;
+}
+.container_a1 img{
+	position: absolute;
+	width: 40px;
+	border-radius: 50%;
+	right: -20px;
+	top: 32px;
+	z-index: 10;
+}
+.right-container img{
+	left: -20px;
+}
+.timeline::after{
+	content: '';
+	position: absolute;
+	width: 6px;
+	height: 100%;
+	background: #fff;
+	top: 0;
+	left: 50%;
+	margin-left: -3px;
+	z-index: -1;
+	animation: moveline 6s linear forwards;
+}
+@keyframes moveline{
+	0%{
+		height: 0;
+	}
+	100%{
+		height: 100%;
+	}
+}
+.text-box h2{
+	font-weight: 600;
+}
+.text-box small{
+	display: inline-block;
+	margin-bottom: 15px;
+}
+.left-container-arrow{
+	height: 0;
+	width: 0;
+	position: absolute;
+	top: 28px;
+	z-index: 1;
+	border-top: 15px solid transparent;
+	border-bottom: 15px solid transparent;
+	border-left: 15px solid #fff;
+	right: -15px;
+}
+.right-container-arrow{
+	height: 0;
+	width: 0;
+	position: absolute;
+	top: 28px;
+	z-index: 1;
+	border-top: 15px solid transparent;
+	border-bottom: 15px solid transparent;
+	border-right: 15px solid #fff;
+	left: -15px;
+}
+@media screen and (max-width: 600px) {
+	
+	.timeline{
+		margin: 50px auto;
+	}
+	.timeline::after{
+		left: 31px;
+	}
+	.container_a1{
+		width: 100%;
+		padding-left: 80px;
+		padding-right: 25px;
+	}
+	.text-box{
+		font-size: 13px;
+	}
+	.text-box small{
+		margin-bottom: 10px;
+	}
+	.right-container {
+		left: 0;
+	}
+	.left-container img, .right-container img{
+		left: 10px;
+	}
+	.left-container-arrow, .right-container-arrow{
+		border-right: 15px solid#fff;
+		border-left: 0;
+		left: -15px;
+	}
+}
